@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sara de Souza | Psicóloga em Piracicaba</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#6F8F8D;
+  --accent:#EEF4F3;
+  --text:#2d2d2d;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+
+body{
+  font-family:'Inter', sans-serif;
+  color:var(--text);
+}
+
+/* NAV */
+header{
+  position:fixed;
+  width:100%;
+  background:white;
+  border-bottom:1px solid #eee;
+  z-index:1000;
+}
+
+nav{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  padding:15px 20px;
+}
+
+nav h1{
+  font-family:'Playfair Display';
+  font-size:20px;
+}
+
+nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:#555;
+  font-size:14px;
+}
+
+/* HERO */
+.hero{
+  padding:130px 20px 80px;
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:40px;
+}
+
+.hero-text{
+  flex:1;
+}
+
+.hero-text h2{
+  font-family:'Playfair Display';
+  font-size:38px;
+  margin-bottom:15px;
+}
+
+.hero-text p{
+  margin-bottom:25px;
+  color:#555;
+}
+
+.btn{
+  background:var(--primary);
+  color:white;
+  padding:14px 22px;
+  border-radius:8px;
+  text-decoration:none;
+  display:inline-block;
+  font-size:14px;
+}
+
+.hero img{
+  width:280px;
+  border-radius:12px;
+}
+
+/* SEÇÕES */
+section{
+  padding:70px 20px;
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+
+section h2{
+  font-family:'Playfair Display';
+  font-size:28px;
+  margin-bottom:20px;
+}
+
+/* CARDS */
+.cards{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
+}
+
+.card{
+  background:var(--accent);
+  padding:25px;
+  border-radius:12px;
+  width:260px;
+}
+
+/* BLOCO DIFERENCIAL */
+.highlight{
+  background:#fafafa;
+  padding:50px;
+  border-radius:12px;
+}
+
+/* FORM */
+form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  max-width:400px;
+  margin:auto;
+}
+
+input, textarea{
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ddd;
+}
+
+button{
+  background:var(--primary);
+  color:white;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* WHATS */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  text-decoration:none;
+}
+
+/* FOOTER */
+footer{
+  background:#f7f7f7;
+  text-align:center;
+  padding:30px;
+  font-size:14px;
+  color:#777;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+  <h1>Sara de Souza</h1>
+  <div>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Atendimento</a>
+    <a href="#contato">Contato</a>
+  </div>
+</nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h2>Um espaço seguro para cuidar da sua saúde emocional</h2>
+    <p>
+      Psicoterapia com escuta acolhedora, ética e respeito ao seu tempo.
+      Atendimento para quem busca equilíbrio emocional, autoconhecimento e bem-estar.
+    </p>
+
+    <a class="btn" href="https://wa.me/554187171003" target="_blank">
+      Agendar pelo WhatsApp
+    </a>
+
+    <p style="margin-top:10px;font-size:13px;">
+      📍 Piracicaba - SP • Atendimento online e presencial <br>
+      CRP: 06/220759
+    </p>
+  </div>
+
+  <img src="https://via.placeholder.com/300x350">
+</section>
+
+<section id="sobre">
+  <h2>Sobre</h2>
+  <p>
+    Sou Sara de Souza, psicóloga com atuação clínica voltada ao acolhimento e ao desenvolvimento emocional.
+    Meu trabalho é oferecer um espaço seguro para que você possa compreender seus sentimentos,
+    enfrentar desafios e construir uma vida com mais equilíbrio e qualidade.
+  </p>
+</section>
+
+<section id="servicos">
+  <h2>Como posso te ajudar</h2>
+  <div class="cards">
+
+    <div class="card">
+      <h3>Ansiedade</h3>
+      <p>Compreensão e manejo da ansiedade no dia a dia.</p>
+    </div>
+
+    <div class="card">
+      <h3>Autoconhecimento</h3>
+      <p>Entenda seus padrões e fortaleça sua identidade.</p>
+    </div>
+
+    <div class="card">
+      <h3>Relacionamentos</h3>
+      <p>Melhore sua comunicação e vínculos afetivos.</p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="highlight">
+    <h2>Como funciona o atendimento</h2>
+    <p>
+      As sessões têm duração média de 50 minutos e podem ser realizadas de forma online ou presencial em Piracicaba.
+      O agendamento é simples e feito diretamente pelo WhatsApp.
+    </p>
+  </div>
+</section>
+
+<section id="contato">
+  <h2>Agende sua primeira conversa</h2>
+
+  <form onsubmit="enviarWhats(event)">
+    <input type="text" id="nome" placeholder="Seu nome" required>
+    <input type="text" id="msg" placeholder="O que você gostaria de conversar?" required>
+    <button type="submit">Falar no WhatsApp</button>
+  </form>
+
+</section>
+
+<footer>
+  © 2026 Sara de Souza | Psicóloga em Piracicaba - SP
+</footer>
+
+<a class="whatsapp" href="https://wa.me/554187171003" target="_blank">💬</a>
+
+<script>
+function enviarWhats(e){
+  e.preventDefault();
+
+  let nome = document.getElementById("nome").value;
+  let msg = document.getElementById("msg").value;
+
+  let texto = `Olá, meu nome é ${nome}. Gostaria de iniciar terapia. ${msg}`;
+  let url = `https://wa.me/554187171003?text=${encodeURIComponent(texto)}`;
+
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
