@@ -4,32 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234A6E58'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Playfair Display, serif' font-size='60' font-weight='600' fill='%23FFFFFF'>S</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23111111'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Epilogue, sans-serif' font-size='60' font-weight='600' fill='%23FFFFFF'>S</text></svg>">
 
 <title>Sara de Souza | Psicóloga Clínica</title>
 <meta name="description" content="Encontre um espaço seguro para cuidar da sua saúde mental, gerenciar a ansiedade e construir uma vida mais leve.">
 <meta property="og:title" content="Sara de Souza | Psicóloga Clínica">
 <meta property="og:description" content="Atendimento psicológico acolhedor e focado em soluções práticas. Agende sua sessão online.">
-<meta property="og:image" content="https://media.licdn.com/dms/image/v2/D4D03AQEtVH4wd9xjSQ/profile-displayphoto-crop_800_800/B4DZ5lusWAKYAI-/0/1779823200383?e=1782950400&v=beta&t=kCGcw-KH-MrNIGCXYz6sCBIQdfb_F22BVtU8n9SX4xw">
 <meta property="og:url" content="https://psicologasarasouza.vercel.app">
 <meta property="og:type" content="website">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+/* PALETA MINIMALISTA / NEO-BRUTALISTA */
 :root {
-  --bg-color: #FAFAFA;
-  --bg-header: #F1F4F2;
-  --bg-footer: #EAEFEA;
-  --text-main: #2A2C2B;
-  --text-light: #5A605D;
-  --primary: #4A6E58;
-  --primary-hover: #3A5645;
+  --bg-color: #F4F4F2;
+  --text-main: #111111;
+  --text-light: #555555;
+  --border-color: #D6D6D6;
   --white: #FFFFFF;
-  --whatsapp: #25D366;
-  --accent: #E2E8E4;
 }
 
 * {
@@ -39,12 +34,13 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Manrope', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  font-weight: 400;
 }
 
 html {
@@ -54,13 +50,24 @@ html {
 /* SCROLL REVEAL */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
-
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* RÓTULOS ESTILO ESTÚDIO: ( LABEL ) */
+.label {
+  display: block;
+  font-family: 'Manrope', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-light);
+  margin-bottom: 40px;
 }
 
 /* MENU */
@@ -71,188 +78,211 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 5%;
+  padding: 20px 40px;
   z-index: 1000;
   transition: all 0.3s ease;
   background: transparent;
+  border-bottom: 1px solid transparent;
 }
-
 .menu.scrolled {
-  background: var(--white);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  padding: 15px 5%;
+  background: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .brand {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 18px;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
   color: var(--text-main);
 }
 
 .menu-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 30px;
 }
 
 .menu a {
   text-decoration: none;
   color: var(--text-main);
-  font-size: 15px;
-  font-weight: 500;
-  transition: color 0.2s ease;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: opacity 0.2s ease;
 }
 
 .menu a:hover {
-  color: var(--primary);
+  opacity: 0.5;
 }
 
 .btn-menu {
-  background: var(--primary);
-  color: var(--white) !important;
-  padding: 10px 24px;
-  border-radius: 50px;
-  transition: background 0.3s ease, transform 0.2s ease;
+  background: var(--text-main);
+  color: var(--bg-color) !important;
+  padding: 12px 24px;
+  border: 1px solid var(--text-main);
+  transition: all 0.3s ease;
 }
 
 .btn-menu:hover {
-  background: var(--primary-hover);
-  transform: translateY(-2px);
+  background: transparent;
+  color: var(--text-main) !important;
 }
 
 .hamb {
   display: none;
   font-size: 24px;
   cursor: pointer;
-  color: var(--text-main);
 }
 
-/* HEADER E SELO CRP */
+/* HEADER / HERO */
 header {
-  padding: 160px 20px 100px;
+  padding: 200px 40px 120px;
   text-align: center;
-  background: var(--bg-header);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.foto-wrapper {
-  position: relative;
-  margin-bottom: 30px;
-}
-
-.foto {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid var(--white);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid var(--border-color);
 }
 
 h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 44px;
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 7vw; /* Escala dinamicamente com a tela */
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 20px;
   color: var(--text-main);
 }
 
 .crp-badge {
   display: inline-block;
-  background: rgba(74, 110, 88, 0.1);
-  color: var(--primary);
-  padding: 6px 16px;
-  border-radius: 50px;
-  font-size: 14px;
+  font-family: 'Manrope', sans-serif;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 8px 16px;
+  font-size: 12px;
   font-weight: 600;
-  margin-bottom: 24px;
-  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
 }
 
 .sub {
   font-size: 18px;
   color: var(--text-light);
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  margin-top: 40px;
-  padding: 16px 36px;
-  background: var(--primary);
-  color: var(--white);
-  border-radius: 50px;
+  margin-top: 50px;
+  padding: 20px 40px;
+  background: var(--text-main);
+  color: var(--bg-color);
   text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
-  box-shadow: 0 8px 20px rgba(74, 110, 88, 0.2);
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid var(--text-main);
   transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background: var(--primary-hover);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 24px rgba(74, 110, 88, 0.3);
-}
-
-/* SEÇÕES */
-section {
-  padding: 100px 5%;
-  max-width: 1100px;
-  margin: auto;
-}
-
-h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  margin-bottom: 40px;
+  background: transparent;
   color: var(--text-main);
-  text-align: center;
 }
 
-.texto-centralizado {
-  text-align: center;
-  max-width: 750px;
-  margin: 0 auto 20px;
+/* ESTRUTURA GLOBAL DAS SEÇÕES */
+section {
+  padding: 100px 40px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* LAYOUT Z (SOBRE MIM) */
+.sobre-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0; /* Grelha fechada */
+  border: 1px solid var(--border-color);
+}
+
+.sobre-imagem {
+  border-right: 1px solid var(--border-color);
+}
+
+.sobre-imagem img {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  object-fit: cover;
+  display: block;
+}
+
+.sobre-texto {
+  padding: 60px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sobre-texto h2 {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: 40px;
+}
+
+.sobre-texto p {
   color: var(--text-light);
-  font-size: 17px;
+  font-size: 16px;
+  margin-bottom: 24px;
+  line-height: 1.7;
 }
 
-/* CARDS */
+/* GRID DE SERVIÇOS */
+.cards-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--border-color);
 }
 
 .card {
   background: var(--white);
-  padding: 40px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(0,0,0,0.02);
+  padding: 50px 40px;
+  border-right: 1px solid var(--border-color);
+  transition: background 0.3s ease;
+}
+
+.card:last-child {
+  border-right: none;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  background: var(--bg-color);
 }
 
 .card h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  margin-bottom: 15px;
-  color: var(--text-main);
+  font-family: 'Epilogue', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
 }
 
 .card p {
@@ -260,6 +290,407 @@ h2 {
   font-size: 15px;
 }
 
-/* PASSO A PASSO (NÚMEROS EDITORIAIS) */
+/* A JORNADA (PASSO A PASSO EDITORIAL) */
+.jornada-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .passos-grid {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--border-color);
+}
+
+.passo-item {
+  padding: 50px 40px;
+  border-right: 1px solid var(--border-color);
+  background: var(--bg-color);
+}
+
+.passo-item:last-child {
+  border-right: none;
+}
+
+.passo-numero {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  color: var(--text-main);
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.passo-item h3 {
+  font-size: 13px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.passo-item p {
+  font-size: 15px;
+  color: var(--text-light);
+}
+
+/* FAQ E BANNER ONLINE JUNTOS */
+.faq-online-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid var(--border-color);
+}
+
+.banner-online {
+  background: var(--text-main);
+  color: var(--white);
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-online h3 {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.banner-online p {
+  font-size: 16px;
+  margin-bottom: 40px;
+  opacity: 0.8;
+}
+
+.banner-online .btn-light {
+  background: var(--bg-color);
+  color: var(--text-main);
+  padding: 16px 32px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.banner-online .btn-light:hover {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+.faq-list {
+  background: var(--white);
+  border-left: 1px solid var(--border-color);
+}
+
+.faq-item {
+  padding: 40px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item strong {
+  display: block;
+  font-family: 'Epilogue', sans-serif;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.faq-item span {
+  color: var(--text-light);
+  font-size: 15px;
+}
+
+/* RODAPÉ BRUTALISTA */
+footer {
+  padding: 100px 40px 40px;
+  text-align: center;
+}
+
+.footer-brand {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 5vw;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  line-height: 1;
+  margin-bottom: 30px;
+}
+
+.social {
+  margin: 30px 0 60px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social a {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.social a:hover {
+  opacity: 0.5;
+}
+
+.aviso {
+  font-size: 11px;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* WHATSAPP FLUTUANTE RETO */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--text-main);
+  color: var(--bg-color);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background: var(--whatsapp);
+  color: white;
+}
+
+.whatsapp-float svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+/* RESPONSIVIDADE PARA TELEMÓVEL (MOBILE) */
+@media(max-width: 900px) {
+  .menu { padding: 20px; }
+  header { padding: 160px 20px 80px; }
+  h1 { font-size: 12vw; }
+  section { padding: 60px 20px; }
+  
+  .menu-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: var(--bg-color);
+    flex-direction: column;
+    padding: 40px;
+    border-bottom: 1px solid var(--border-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  .menu-links.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .hamb { display: block; }
+
+  .sobre-container, .cards, .passos-grid, .faq-online-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre-imagem { border-right: none; border-bottom: 1px solid var(--border-color); }
+  .sobre-imagem img { min-height: 400px; }
+  .sobre-texto { padding: 40px 20px; }
+  
+  .card { border-right: none; border-bottom: 1px solid var(--border-color); }
+  .card:last-child { border-bottom: none; }
+  
+  .passo-item { border-right: none; border-bottom: 1px solid var(--border-color); }
+  .passo-item:last-child { border-bottom: none; }
+  
+  .faq-list { border-left: none; border-top: 1px solid var(--border-color); }
+  
+  .footer-brand { font-size: 10vw; }
+}
+</style>
+</head>
+<body>
+
+<nav class="menu" id="menu">
+  <div class="brand">Sara de Souza</div>
+  <div class="menu-links" id="links">
+    <a href="#sobre" onclick="toggleMenu()">Sobre</a>
+    <a href="#atendimento" onclick="toggleMenu()">Áreas</a>
+    <a href="#funcionamento" onclick="toggleMenu()">Jornada</a>
+    <a href="https://calendar.app.google/CGDEQv5CtrxD7THm8" class="btn-menu" target="_blank">Agendar</a>
+  </div>
+  <div class="hamb" onclick="toggleMenu()">☰</div>
+</nav>
+
+<header class="reveal">
+  <span class="label">( Psicoterapia Clínica )</span>
+  <h1>Sara de Souza</h1>
+  
+  <div class="crp-badge">[ CRP 06/220759 ]</div>
+  
+  <p class="sub">
+    Você não precisa lidar com o peso da rotina sozinho. Encontre um espaço seguro para cuidar da sua saúde mental, gerenciar a ansiedade e construir uma vida mais leve.
+  </p>
+  
+  <a class="btn" href="https://calendar.app.google/CGDEQv5CtrxD7THm8" target="_blank">
+    Iniciar Acompanhamento
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+  </a>
+</header>
+
+<section id="sobre" class="reveal">
+  <span class="label">( A Profissional )</span>
+  <div class="sobre-container">
+    <div class="sobre-imagem">
+      <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800&auto=format&fit=crop" alt="Psicóloga Sara de Souza">
+    </div>
+    
+    <div class="sobre-texto">
+      <h2>Quem vai te acompanhar.</h2>
+      <p>Acredito que a psicoterapia não é sobre tentar apagar a sua história, mas sim sobre construir repertório para lidar com os desafios da rotina de uma forma muito mais consciente e leve. Meu papel é te guiar nesse processo com ética, ciência e, acima de tudo, escuta ativa.</p>
+      
+      <p>Sou pós-graduanda em Terapias Cognitivo-Comportamentais Contextuais pela prestigiada PUCPR/Artmed. Essa é uma abordagem baseada em evidências que foca não apenas na redução dos sintomas, mas em te ajudar a tomar decisões de acordo com os valores que importam para você.</p>
+      
+      <p>Além dos atendimentos clínicos online, atuo diretamente no Sistema de Saúde Mental Público (CAPS), o que me traz uma compreensão clínica profunda para acolher as mais diversas complexidades do sofrimento emocional, totalmente livre de julgamentos.</p>
+    </div>
+  </div>
+</section>
+
+<section id="atendimento" class="reveal" style="background-color: var(--white);">
+  <div class="cards-wrapper">
+    <span class="label">( Áreas de Atuação )</span>
+    <div class="cards">
+      <div class="card">
+        <h3>Ansiedade e Estresse</h3>
+        <p>Técnicas baseadas em evidências para reduzir a exaustão mental, controlar crises e devolver a tranquilidade ao seu dia a dia.</p>
+      </div>
+      <div class="card">
+        <h3>Autoconhecimento</h3>
+        <p>Fortaleça sua autoestima para impor limites, dizer "não" e tomar decisões com segurança e clareza sobre o que você realmente quer.</p>
+      </div>
+      <div class="card">
+        <h3>Relacionamentos</h3>
+        <p>Aprenda a se comunicar de forma assertiva e a construir laços onde você se sinta valorizado, sem se anular no processo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="funcionamento" class="reveal">
+  <div class="jornada-container">
+    <span class="label">( A Jornada )</span>
+    <div class="passos-grid">
+      <div class="passo-item">
+        <div class="passo-numero">01</div>
+        <h3>Escolha seu horário</h3>
+        <p>Acesse a agenda online e selecione o dia e horário que melhor se encaixam na sua rotina, de forma rápida e transparente.</p>
+      </div>
+      <div class="passo-item">
+        <div class="passo-numero">02</div>
+        <h3>O Link Seguro</h3>
+        <p>Você receberá um e-mail de confirmação automático contendo o link exclusivo do Google Meet para o nosso encontro.</p>
+      </div>
+      <div class="passo-item">
+        <div class="passo-numero">03</div>
+        <h3>A Sessão</h3>
+        <p>No horário marcado, conecte-se através do seu celular ou computador, garantindo que esteja em um ambiente calmo e privativo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="reveal" style="border-bottom: none; padding-bottom: 0;">
+  <span class="label">( Dúvidas Frequentes )</span>
+  <div class="faq-online-wrapper">
+    <div class="faq-list">
+      <div class="faq-item">
+        <strong>Qual é a duração das sessões?</strong>
+        <span>As sessões possuem duração padrão de 50 minutos e ocorrem com frequência semanal para garantir a evolução do processo.</span>
+      </div>
+      <div class="faq-item">
+        <strong>O atendimento é sigiloso?</strong>
+        <span>Sim. Todo o conteúdo é confidencial, amparado pelo código de ética. As chamadas possuem criptografia de ponta a ponta.</span>
+      </div>
+      <div class="faq-item">
+        <strong>Como funciona o pagamento?</strong>
+        <span>Os pagamentos são realizados via Pix ou transferência. Os detalhes vão no e-mail de confirmação da sua consulta.</span>
+      </div>
+    </div>
+    
+    <div class="banner-online">
+      <h3>Terapia 100% Online</h3>
+      <p>Sessões realizadas por videochamada com a mesma eficácia do atendimento presencial. Tenha seu momento de cuidado no conforto e na privacidade da sua casa.</p>
+      <a href="https://calendar.app.google/CGDEQv5CtrxD7THm8" class="btn-light" target="_blank">Ver Horários Disponíveis</a>
+    </div>
+  </div>
+</section>
+
+<footer class="reveal">
+  <div class="footer-brand">Sara de Souza</div>
+  <span class="label" style="margin-bottom: 0;">( Psicologia Clínica )</span>
+
+  <div class="social">
+    <a href="https://www.instagram.com/psicosarassouza" target="_blank">Instagram</a>
+    <a href="https://www.linkedin.com/in/sarasouzza-sl" target="_blank">LinkedIn</a>
+    <a href="https://wa.me/554187171003" target="_blank">WhatsApp</a>
+  </div>
+
+  <p class="aviso">Este site não oferece atendimento emergencial. Em caso de crise ou risco à vida, ligue imediatamente para o CVV (188) ou procure o pronto-socorro mais próximo.</p>
+</footer>
+
+<a href="https://wa.me/554187171003" class="whatsapp-float" target="_blank" aria-label="Fale conosco pelo WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.12.553 4.184 1.603 5.986L.108 23.826l5.962-1.565A11.97 11.97 0 0012.031 24c6.646 0 12.031-5.385 12.031-12.031C24.062 5.385 18.677 0 12.031 0zm0 22.015c-1.785 0-3.535-.48-5.068-1.39l-.364-.216-3.766.988.995-3.666-.237-.376A9.972 9.972 0 011.985 12.03c0-5.545 4.515-10.06 10.06-10.06 5.545 0 10.06 4.515 10.06 10.06 0 5.545-4.515 10.06-10.06 10.06zm5.513-7.535c-.303-.152-1.792-.884-2.071-.986-.278-.101-.482-.152-.684.152-.202.303-.781.986-.957 1.188-.177.202-.354.227-.657.076-1.554-.775-2.73-1.642-3.8-3.411-.177-.303.177-.278.475-.884.076-.152.038-.278-.019-.43-.057-.152-.684-1.648-.937-2.254-.247-.594-.496-.513-.684-.523h-.584c-.202 0-.531.076-.809.38-.278.303-1.062 1.037-1.062 2.528 0 1.492 1.087 2.934 1.239 3.136.152.202 2.136 3.262 5.176 4.57.722.31 1.285.495 1.724.634.723.23 1.383.197 1.902.12.582-.086 1.792-.733 2.045-1.442.253-.709.253-1.315.177-1.442-.076-.127-.278-.202-.581-.354z"/></svg>
+</a>
+
+<script>
+function toggleMenu() {
+  document.getElementById("links").classList.toggle("active");
+}
+window.addEventListener("scroll", function() {
+  const menu = document.getElementById("menu");
+  if (window.scrollY > 50) {
+    menu.classList.add("scrolled");
+  } else {
+    menu.classList.remove("scrolled");
+  }
+});
+const revealElements = document.querySelectorAll('.reveal');
+const revealCallback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      observer.unobserve(entry.target);
+    }
+  });
+};
+const revealObserver = new IntersectionObserver(revealCallback, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+revealElements.forEach(el => revealObserver.observe(el));
+</script>
+
+</body>
+</html>
