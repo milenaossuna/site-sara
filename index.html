@@ -48,6 +48,7 @@ align-items:center;
 justify-content:space-between;
 padding:90px 8%;
 gap:40px;
+flex-wrap:wrap;
 }
 
 .hero-text{max-width:520px;}
@@ -94,6 +95,8 @@ color:white;
 
 .hero img{
 width:340px;
+height:380px;
+object-fit:cover;
 border-radius:14px;
 box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
@@ -160,7 +163,7 @@ color:#777;
 margin-top:40px;
 }
 
-/* ANIMAÇÕES */
+/* ANIMAÇÃO */
 .reveal{
 opacity:0;
 transform:translateY(40px);
@@ -172,7 +175,7 @@ opacity:1;
 transform:translateY(0);
 }
 
-/* WHATSAPP FLOAT */
+/* WHATS FLOAT */
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -207,28 +210,42 @@ transform:scale(1.05);
 </header>
 
 <section class="hero reveal">
+
 <div class="hero-text">
 <h1>Psicoterapia para adultos</h1>
-<p>Atendimento acolhedor baseado na Terapia Cognitivo-Comportamental (TCC), promovendo equilíbrio emocional e qualidade de vida.</p>
 
-<a class="btn btn-primary" href="https://wa.me/554187171003" target="_blank">Agendar pelo WhatsApp</a> <a class="btn btn-outline" href="#agendamento">Agendamento online</a>
+<p>
+Atendimento acolhedor com base na Terapia Cognitivo-Comportamental (TCC), promovendo equilíbrio emocional e qualidade de vida.
+</p>
+
+<a class="btn btn-primary" href="https://wa.me/554187171003" target="_blank">
+Agendar pelo WhatsApp
+</a>
+
+<a class="btn btn-outline" href="#agendamento">
+Agendamento online
+</a>
 
 <div class="social">
 <a href="https://www.instagram.com/psicosarassouza" target="_blank">Instagram</a>
 <a href="https://www.linkedin.com/in/sarasouzza-sl" target="_blank">LinkedIn</a>
 </div>
+
 </div>
 
-<img src="https://media.licdn.com/dms/image/v2/D4D03AQEtVH4wd9xjSQ/profile-displayphoto-crop_800_800/B4DZ5lusWAKYAI-/0/1779823200383">
+<img src="foto.jpg">
+
 </section>
 
 <section id="sobre" class="reveal">
 <h2>Sobre</h2>
+
 <p class="about">
 Psicóloga com atuação voltada ao público adulto, utilizando a Terapia Cognitivo-Comportamental (TCC). Atendimento com escuta acolhedora, foco prático e desenvolvimento emocional.
 <br><br>
 CRP: 06/220759
 </p>
+
 </section>
 
 <section id="servicos" class="reveal">
@@ -252,6 +269,7 @@ CRP: 06/220759
 </div>
 
 </div>
+
 </section>
 
 <section id="agendamento" class="reveal">
@@ -269,6 +287,7 @@ style="width:100%; height:600px; border:none;">
 </iframe>
 
 </div>
+
 </section>
 
 <footer>
