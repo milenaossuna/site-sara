@@ -1,187 +1,211 @@
 <!DOCTYPE html>
-
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sara de Souza | Psicóloga</title>
 
-<title>Psicóloga Sara Souza</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Poppins', sans-serif;
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+background:#f7f8f7;
+color:#2e2e2e;
 }
 
-body {
-background: #f5f6f7;
-color: #2d2d2d;
+header{
+padding:80px 20px;
+text-align:center;
+background:#eef2ef;
 }
 
-.container {
-max-width: 1100px;
-margin: auto;
-padding: 60px 20px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-flex-wrap: wrap;
-gap: 40px;
+.foto{
+width:140px;
+height:140px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:20px;
+box-shadow:0 6px 20px rgba(0,0,0,0.1);
 }
 
-.text {
-max-width: 520px;
-animation: fadeUp 0.8s ease;
+h1{
+font-family:'Playfair Display',serif;
+font-size:36px;
+margin-bottom:10px;
 }
 
-.text h1 {
-font-size: 34px;
-margin-bottom: 10px;
+.sub{
+font-size:17px;
+color:#5c6b63;
+max-width:600px;
+margin:auto;
+line-height:1.5;
 }
 
-.text h2 {
-font-size: 18px;
-font-weight: 400;
-color: #6b6b6b;
-margin-bottom: 20px;
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 28px;
+background:#6b8f7a;
+color:white;
+border-radius:6px;
+text-decoration:none;
+font-size:15px;
 }
 
-.text p {
-margin-bottom: 22px;
-line-height: 1.6;
+section{
+padding:60px 20px;
+max-width:900px;
+margin:auto;
 }
 
-.buttons {
-display: flex;
-gap: 12px;
-flex-wrap: wrap;
+h2{
+font-family:'Playfair Display',serif;
+margin-bottom:20px;
 }
 
-.btn {
-padding: 12px 20px;
-border-radius: 10px;
-text-decoration: none;
-font-size: 14px;
-transition: all 0.25s ease;
+.cards{
+display:grid;
+gap:20px;
 }
 
-.btn-primary {
-background: #5f7d6b;
-color: white;
+.card{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 4px 10px rgba(0,0,0,0.05);
 }
 
-.btn-primary:hover {
-background: #4e695a;
-transform: translateY(-2px);
+footer{
+background:#e9eeeb;
+padding:40px;
+text-align:center;
+font-size:14px;
 }
 
-.btn-outline {
-border: 1px solid #cfcfcf;
-color: #333;
-background: white;
-}
-
-.btn-outline:hover {
-background: #f0f0f0;
-transform: translateY(-2px);
-}
-
-.image {
-animation: fadeUp 1s ease;
-}
-
-.image img {
-width: 360px;
-height: 400px;
-object-fit: cover;
-border-radius: 16px;
-box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-}
-
-/* WhatsApp */
-.whatsapp {
-position: fixed;
-bottom: 20px;
-right: 20px;
-background: #25D366;
-color: white;
-padding: 14px 16px;
-border-radius: 50%;
-font-size: 22px;
-text-decoration: none;
-box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-transition: 0.3s;
-}
-
-.whatsapp:hover {
-transform: scale(1.1);
-}
-
-/* animação */
-@keyframes fadeUp {
-from {
-opacity: 0;
-transform: translateY(20px);
-}
-to {
-opacity: 1;
-transform: translateY(0);
-}
-}
-
-/* responsivo */
-@media(max-width: 768px){
-.container {
-flex-direction: column;
-text-align: center;
-}
-
-.image img {
-width: 100%;
-height: 320px;
-}
+.social a{
+margin:0 10px;
+text-decoration:none;
+color:#2e2e2e;
 }
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
+<header>
 
-<div class="text">
-<h1>Sara Souza</h1>
-<h2>Psicóloga | Terapia Cognitivo-Comportamental (TCC)</h2>
+<img src="https://media.licdn.com/dms/image/v2/D4D03AQEtVH4wd9xjSQ/profile-displayphoto-crop_800_800/B4DZ5lusWAKYAI-/0/1779823200383?e=1782950400&v=beta&t=kCGcw-KH-MrNIGCXYz6sCBIQdfb_F22BVtU8n9SX4xw" class="foto">
+
+<h1>Sara de Souza</h1>
+
+<p class="sub">
+Psicóloga Clínica • CRP 06/220759<br>
+Terapia Cognitivo-Comportamental (TCC)<br>
+Atendimento psicológico para adultos
+</p>
+
+<a class="btn" href="https://wa.me/554187171003">
+Agendar pelo WhatsApp
+</a>
+
+</header>
+
+<section>
+<h2>Sobre o atendimento</h2>
 
 <p>
-Atendimento acolhedor voltado ao público adulto, com foco no desenvolvimento emocional,
-autoconhecimento e construção de uma vida mais equilibrada.
+A psicoterapia é um espaço de acolhimento, escuta e construção. Meu trabalho é oferecer um ambiente seguro, ético e sem julgamentos, onde você possa compreender melhor seus pensamentos, emoções e comportamentos.
 </p>
 
-<div class="buttons">
-<a href="https://wa.me/554187171003" class="btn btn-primary">Agendar pelo WhatsApp</a>
-<a href="#" class="btn btn-outline">Agendamento online</a>
-<a href="https://www.instagram.com/psicosarassouza" class="btn btn-outline">Instagram</a>
-<a href="https://www.linkedin.com/in/sarasouzza-sl" class="btn btn-outline">LinkedIn</a>
-</div>
-
-<p style="margin-top:20px; font-size:14px; color:#777;">
-CRP: 06/220759
+<p>
+Atuo com a Terapia Cognitivo-Comportamental (TCC), uma abordagem baseada em evidências científicas, focada no presente e no desenvolvimento de estratégias práticas para lidar com dificuldades emocionais e comportamentais.
 </p>
 
+<p>
+O processo terapêutico é colaborativo e respeita o seu tempo, suas vivências e sua individualidade.
+</p>
+
+</section>
+
+<section>
+<h2>Como posso te ajudar</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Ansiedade e estresse</h3>
+<p>Identificação de padrões de pensamento e desenvolvimento de estratégias para reduzir sintomas e promover equilíbrio emocional.</p>
 </div>
 
-<div class="image">
-<img src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=800&auto=format&fit=crop" alt="Psicóloga">
+<div class="card">
+<h3>Autoconhecimento</h3>
+<p>Compreensão mais profunda de si mesmo, auxiliando em decisões, autoestima e construção de sentido.</p>
+</div>
+
+<div class="card">
+<h3>Relacionamentos</h3>
+<p>Melhoria na comunicação, estabelecimento de limites e desenvolvimento de vínculos mais saudáveis.</p>
 </div>
 
 </div>
 
-<a href="https://wa.me/554187171003" class="whatsapp">💬</a>
+</section>
+
+<section>
+<h2>Minha abordagem</h2>
+
+<p>
+A Terapia Cognitivo-Comportamental (TCC) é uma abordagem estruturada e orientada para objetivos, com foco na relação entre pensamentos, emoções e comportamentos. Durante o processo terapêutico, trabalhamos juntos na identificação de padrões que geram sofrimento e no desenvolvimento de habilidades práticas para lidar com os desafios do dia a dia.
+</p>
+
+</section>
+
+<section>
+<h2>Perguntas frequentes</h2>
+
+<p><strong>Como funciona o atendimento?</strong><br>
+As sessões têm duração média de 50 minutos e são realizadas de forma online, com frequência semanal.
+</p>
+
+<p><strong>O atendimento é sigiloso?</strong><br>
+Sim. Todo o processo segue rigorosamente o Código de Ética Profissional do Psicólogo.
+</p>
+
+<p><strong>Como agendar?</strong><br>
+Você pode agendar diretamente pelo WhatsApp ou pelo agendamento online disponível abaixo.
+</p>
+
+</section>
+
+<section>
+<h2>Agendamento online</h2>
+
+<div style="min-height:600px;display:flex;align-items:center;justify-content:center;">
+<p>Agendamento online em breve</p>
+</div>
+
+</section>
+
+<footer>
+
+<p><strong>Sara de Souza</strong><br>
+Psicóloga Clínica • CRP 06/220759</p>
+
+<p>WhatsApp: (41) 8717-1003</p>
+
+<div class="social">
+<a href="https://www.instagram.com/psicosarassouza" target="_blank">Instagram</a>
+<a href="https://www.linkedin.com/in/sarasouzza-sl" target="_blank">LinkedIn</a>
+</div>
+
+<p style="margin-top:20px;font-size:12px;">
+Este site não oferece atendimento emergencial. Em caso de crise, ligue 188 (CVV).
+</p>
+
+</footer>
 
 </body>
 </html>
