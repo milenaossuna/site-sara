@@ -4,283 +4,182 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sara de Souza | Psicóloga em Piracicaba</title>
+<title>Psicóloga TCC em Piracicaba | Sara de Souza</title>
+<meta name="description" content="Psicóloga especializada em TCC para adultos. Atendimento acolhedor, baseado em evidências. Agende sua consulta.">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --primary:#6F8F8D;
-  --accent:#EEF4F3;
-  --text:#2d2d2d;
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #F7F5F2;
+  color: #4A4A4A;
 }
-
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
-
-body{
-  font-family:'Inter', sans-serif;
-  color:var(--text);
+header {
+  padding: 100px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #ffffff, #eef5f2);
 }
-
-/* NAV */
-header{
-  position:fixed;
-  width:100%;
-  background:white;
-  border-bottom:1px solid #eee;
-  z-index:1000;
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 46px;
 }
-
-nav{
-  max-width:1100px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  padding:15px 20px;
+h2 {
+  font-family: 'Playfair Display', serif;
 }
-
-nav h1{
-  font-family:'Playfair Display';
-  font-size:20px;
+.container {
+  max-width: 950px;
+  margin: auto;
+  padding: 40px 20px;
 }
-
-nav a{
-  margin-left:20px;
-  text-decoration:none;
-  color:#555;
-  font-size:14px;
+.btn {
+  display: inline-block;
+  background: #7FAF9B;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 15px;
 }
-
-/* HERO */
-.hero{
-  padding:130px 20px 80px;
-  max-width:1100px;
-  margin:auto;
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  gap:40px;
+.btn:hover {
+  background: #6b9987;
 }
-
-.hero-text{
-  flex:1;
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
-
-.hero-text h2{
-  font-family:'Playfair Display';
-  font-size:38px;
-  margin-bottom:15px;
+.profile {
+  text-align: center;
 }
-
-.hero-text p{
-  margin-bottom:25px;
-  color:#555;
+.profile img {
+  width: 180px;
+  border-radius: 100px;
+  margin: 20px 0;
 }
-
-.btn{
-  background:var(--primary);
-  color:white;
-  padding:14px 22px;
-  border-radius:8px;
-  text-decoration:none;
-  display:inline-block;
-  font-size:14px;
+.social a {
+  margin: 0 10px;
+  color: #7FAF9B;
+  text-decoration: none;
 }
-
-.hero img{
-  width:280px;
-  border-radius:12px;
+.faq-item {
+  margin-bottom: 15px;
 }
-
-/* SEÇÕES */
-section{
-  padding:70px 20px;
-  max-width:900px;
-  margin:auto;
-  text-align:center;
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
-
-section h2{
-  font-family:'Playfair Display';
-  font-size:28px;
-  margin-bottom:20px;
-}
-
-/* CARDS */
-.cards{
-  display:flex;
-  flex-wrap:wrap;
-  gap:20px;
-  justify-content:center;
-}
-
-.card{
-  background:var(--accent);
-  padding:25px;
-  border-radius:12px;
-  width:260px;
-}
-
-/* BLOCO DIFERENCIAL */
-.highlight{
-  background:#fafafa;
-  padding:50px;
-  border-radius:12px;
-}
-
-/* FORM */
-form{
-  display:flex;
-  flex-direction:column;
-  gap:15px;
-  max-width:400px;
-  margin:auto;
-}
-
-input, textarea{
-  padding:12px;
-  border-radius:8px;
-  border:1px solid #ddd;
-}
-
-button{
-  background:var(--primary);
-  color:white;
-  padding:12px;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
-}
-
-/* WHATS */
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25d366;
-  color:white;
-  padding:15px;
-  border-radius:50%;
-  text-decoration:none;
-}
-
-/* FOOTER */
-footer{
-  background:#f7f7f7;
-  text-align:center;
-  padding:30px;
-  font-size:14px;
-  color:#777;
-}
-
 </style>
 </head>
 
 <body>
 
 <header>
-<nav>
   <h1>Sara de Souza</h1>
-  <div>
-    <a href="#sobre">Sobre</a>
-    <a href="#servicos">Atendimento</a>
-    <a href="#contato">Contato</a>
+  <p>Psicóloga • Terapia Cognitivo-Comportamental (TCC) para adultos</p>
+
+  <a class="btn" href="https://wa.me/554187171003?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" target="_blank">
+    Agendar consulta
+  </a>
+
+  <div class="social">
+    <p>
+      <a href="https://www.instagram.com/psicosarassouza?igsh=MXFmdGV2c3UxbGpoaw==">Instagram</a> |
+      <a href="https://www.linkedin.com/in/sarasouzza-sl/">LinkedIn</a>
+    </p>
   </div>
-</nav>
 </header>
 
-<section class="hero">
-  <div class="hero-text">
-    <h2>Um espaço seguro para cuidar da sua saúde emocional</h2>
+<div class="container">
+
+  <div class="profile">
+    <h2>Sobre</h2>
+    <img src="https://media.licdn.com/dms/image/v2/D4D03AQEtVH4wd9xjSQ/profile-displayphoto-crop_800_800/B4DZ5lusWAKYAI-/0/1779823200383?e=1782950400&v=beta&t=kCGcw-KH-MrNIGCXYz6sCBIQdfb_F22BVtU8n9SX4xw">
     <p>
-      Psicoterapia com escuta acolhedora, ética e respeito ao seu tempo.
-      Atendimento para quem busca equilíbrio emocional, autoconhecimento e bem-estar.
+      Psicóloga clínica com atuação voltada ao público adulto, utilizando a Terapia Cognitivo-Comportamental (TCC),
+      abordagem baseada em evidências científicas que auxilia na compreensão e mudança de padrões de pensamento e comportamento.
     </p>
-
-    <a class="btn" href="https://wa.me/554187171003" target="_blank">
-      Agendar pelo WhatsApp
-    </a>
-
-    <p style="margin-top:10px;font-size:13px;">
-      📍 Piracicaba - SP • Atendimento online e presencial <br>
-      CRP: 06/220759
-    </p>
-  </div>
-
-  <img src="https://via.placeholder.com/300x350">
-</section>
-
-<section id="sobre">
-  <h2>Sobre</h2>
-  <p>
-    Sou Sara de Souza, psicóloga com atuação clínica voltada ao acolhimento e ao desenvolvimento emocional.
-    Meu trabalho é oferecer um espaço seguro para que você possa compreender seus sentimentos,
-    enfrentar desafios e construir uma vida com mais equilíbrio e qualidade.
-  </p>
-</section>
-
-<section id="servicos">
-  <h2>Como posso te ajudar</h2>
-  <div class="cards">
-
-    <div class="card">
-      <h3>Ansiedade</h3>
-      <p>Compreensão e manejo da ansiedade no dia a dia.</p>
-    </div>
-
-    <div class="card">
-      <h3>Autoconhecimento</h3>
-      <p>Entenda seus padrões e fortaleça sua identidade.</p>
-    </div>
-
-    <div class="card">
-      <h3>Relacionamentos</h3>
-      <p>Melhore sua comunicação e vínculos afetivos.</p>
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <div class="highlight">
-    <h2>Como funciona o atendimento</h2>
     <p>
-      As sessões têm duração média de 50 minutos e podem ser realizadas de forma online ou presencial em Piracicaba.
-      O agendamento é simples e feito diretamente pelo WhatsApp.
+      Experiência em saúde mental, incluindo atuação no CAPS, com foco em acolhimento, escuta qualificada e desenvolvimento emocional.
     </p>
+    <p><strong>CRP: 00/00000</strong></p>
   </div>
-</section>
 
-<section id="contato">
-  <h2>Agende sua primeira conversa</h2>
+  <div>
+    <h2>Como posso te ajudar</h2>
+    <div class="card">Ansiedade</div>
+    <div class="card">Depressão</div>
+    <div class="card">Relacionamentos</div>
+    <div class="card">Autoestima</div>
+  </div>
 
-  <form onsubmit="enviarWhats(event)">
-    <input type="text" id="nome" placeholder="Seu nome" required>
-    <input type="text" id="msg" placeholder="O que você gostaria de conversar?" required>
-    <button type="submit">Falar no WhatsApp</button>
-  </form>
+  <div>
+    <h2>Como funciona a terapia</h2>
+    <div class="card">
+      As sessões são realizadas de forma estruturada e acolhedora, com foco no presente e em soluções práticas.
+      Ao longo do processo, você irá compreender melhor seus pensamentos, emoções e comportamentos,
+      desenvolvendo estratégias para lidar com suas dificuldades no dia a dia.
+    </div>
+  </div>
 
-</section>
+  <div>
+    <h2>Agendamento Online</h2>
+    <div class="card">
+      <iframe src="https://calendly.com/SEU-LINK-AQUI" width="100%" height="600"></iframe>
+    </div>
+  </div>
+
+  <div>
+    <h2>Perguntas frequentes</h2>
+
+    <div class="faq-item"><strong>Quanto tempo dura a sessão?</strong><br>Em média, 50 minutos.</div>
+
+    <div class="faq-item"><strong>Atende online?</strong><br>Sim, atendimento online com a mesma qualidade do presencial.</div>
+
+    <div class="faq-item"><strong>Como sei se preciso de terapia?</strong><br>Se algo está te incomodando emocionalmente, já é um bom momento para buscar ajuda.</div>
+
+  </div>
+
+  <div>
+    <h2>Contato</h2>
+
+    <div class="card">
+      <a class="btn" href="https://wa.me/554187171003?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" target="_blank">
+        Falar no WhatsApp
+      </a>
+    </div>
+
+    <div class="card">
+      <form action="https://formspree.io/f/SEU_ID_AQUI" method="POST">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <textarea name="mensagem" rows="4" placeholder="Mensagem"></textarea>
+        <button class="btn" type="submit">Enviar</button>
+      </form>
+    </div>
+
+  </div>
+
+</div>
+
+<a class="whatsapp-float" href="https://wa.me/554187171003" target="_blank">
+  WhatsApp
+</a>
 
 <footer>
-  © 2026 Sara de Souza | Psicóloga em Piracicaba - SP
+  © 2026 Sara de Souza • Psicóloga • TCC para adultos
 </footer>
-
-<a class="whatsapp" href="https://wa.me/554187171003" target="_blank">💬</a>
-
-<script>
-function enviarWhats(e){
-  e.preventDefault();
-
-  let nome = document.getElementById("nome").value;
-  let msg = document.getElementById("msg").value;
-
-  let texto = `Olá, meu nome é ${nome}. Gostaria de iniciar terapia. ${msg}`;
-  let url = `https://wa.me/554187171003?text=${encodeURIComponent(texto)}`;
-
-  window.open(url, "_blank");
-}
-</script>
 
 </body>
 </html>
