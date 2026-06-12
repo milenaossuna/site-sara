@@ -1,295 +1,464 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sara de Souza | Psicóloga</title>
+<title>Sara de Souza | Psicóloga Clínica</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 
 <style>
-body{
-margin:0;
-font-family:'Inter',sans-serif;
-background:#f7f8f7;
-color:#2e2e2e;
+/* VARIÁVEIS DE CORES PARA FACILITAR ALTERAÇÕES */
+:root {
+  --bg-color: #FAFAFA;
+  --bg-header: #F1F4F2;
+  --bg-footer: #EAEFEA;
+  --text-main: #2A2C2B;
+  --text-light: #5A605D;
+  --primary: #4A6E58;
+  --primary-hover: #3A5645;
+  --white: #FFFFFF;
 }
 
-/* MENU */
-.menu{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 20px;
-z-index:1000;
-transition:0.3s;
+/* RESET BÁSICO */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.menu.scrolled{
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.08);
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-.menu-links{
-display:flex;
-gap:20px;
+html {
+  scroll-behavior: smooth;
 }
 
-.menu a{
-text-decoration:none;
-color:#2e2e2e;
-font-size:14px;
+/* MENU DE NAVEGAÇÃO */
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  background: transparent;
 }
 
-.menu a:hover{
-color:#6b8f7a;
+.menu.scrolled {
+  background: var(--white);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 15px 5%;
 }
 
-.btn-menu{
-background:#6b8f7a;
-color:white;
-padding:6px 14px;
-border-radius:6px;
+.brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-main);
 }
 
-/* HAMBURGUER */
-.hamb{
-display:none;
-font-size:22px;
-cursor:pointer;
+.menu-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-.menu-links{
-position:absolute;
-top:60px;
-right:0;
-background:white;
-flex-direction:column;
-width:200px;
-padding:20px;
-display:none;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+.menu a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
-.menu-links.active{
-display:flex;
+.menu a:hover {
+  color: var(--primary);
 }
 
-.hamb{
-display:block;
-}
-}
-
-/* HEADER */
-header{
-padding:110px 20px 80px;
-text-align:center;
-background:#eef2ef;
+.btn-menu {
+  background: var(--primary);
+  color: var(--white) !important;
+  padding: 10px 24px;
+  border-radius: 50px; /* Bordas arredondadas para um visual mais acolhedor */
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.foto{
-width:140px;
-height:140px;
-border-radius:50%;
-object-fit:cover;
-margin-bottom:20px;
-box-shadow:0 6px 20px rgba(0,0,0,0.1);
+.btn-menu:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
 }
 
-h1{
-font-family:'Playfair Display',serif;
-font-size:36px;
-margin-bottom:10px;
+.hamb {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-main);
 }
 
-.sub{
-font-size:17px;
-color:#5c6b63;
-max-width:600px;
-margin:auto;
-line-height:1.5;
+/* CABEÇALHO (HERO SECTION) */
+header {
+  padding: 160px 20px 100px;
+  text-align: center;
+  background: var(--bg-header);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:14px 28px;
-background:#6b8f7a;
-color:white;
-border-radius:6px;
-text-decoration:none;
+.foto-wrapper {
+  position: relative;
+  margin-bottom: 30px;
 }
 
-section{
-padding:60px 20px;
-max-width:900px;
-margin:auto;
+.foto {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--white);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-h2{
-font-family:'Playfair Display',serif;
-margin-bottom:20px;
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 44px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text-main);
 }
 
-.cards{
-display:grid;
-gap:20px;
+.sub {
+  font-size: 18px;
+  color: var(--text-light);
+  max-width: 500px;
+  margin: 0 auto;
+  font-weight: 300;
 }
 
-.card{
-background:white;
-padding:20px;
-border-radius:8px;
-box-shadow:0 4px 10px rgba(0,0,0,0.05);
+.btn {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 16px 36px;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  box-shadow: 0 8px 20px rgba(74, 110, 88, 0.2);
+  transition: all 0.3s ease;
 }
 
-footer{
-background:#e9eeeb;
-padding:40px;
-text-align:center;
-font-size:14px;
+.btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(74, 110, 88, 0.3);
 }
 
-.social a{
-margin:0 10px;
-text-decoration:none;
-color:#2e2e2e;
+/* SEÇÕES GERAIS */
+section {
+  padding: 100px 5%;
+  max-width: 1100px;
+  margin: auto;
 }
 
-html{
-scroll-behavior:smooth;
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: var(--text-main);
+  text-align: center;
+}
+
+.texto-centralizado {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  color: var(--text-light);
+  font-size: 18px;
+}
+
+/* CARDS DE SERVIÇOS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background: var(--white);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.02);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: var(--text-main);
+}
+
+.card p {
+  color: var(--text-light);
+  font-size: 15px;
+}
+
+/* FAQ E ACORDEÃO SIMPLES */
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.faq-item {
+  background: var(--white);
+  padding: 24px;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+.faq-item strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: var(--text-main);
+}
+
+.faq-item span {
+  color: var(--text-light);
+  font-size: 15px;
+}
+
+/* RODAPÉ */
+footer {
+  background: var(--bg-footer);
+  padding: 60px 20px 40px;
+  text-align: center;
+  font-size: 15px;
+  color: var(--text-light);
+}
+
+footer strong {
+  color: var(--text-main);
+  font-size: 18px;
+}
+
+.social {
+  margin: 24px 0;
+}
+
+.social a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.social a:hover {
+  opacity: 0.7;
+}
+
+.aviso {
+  margin-top: 40px;
+  font-size: 13px;
+  opacity: 0.7;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* MEDIA QUERIES (MOBILE) */
+@media(max-width: 768px) {
+  header {
+    padding: 130px 20px 80px;
+  }
+  
+  h1 {
+    font-size: 36px;
+  }
+  
+  section {
+    padding: 70px 20px;
+  }
+
+  .menu-links {
+    position: absolute;
+    top: 70px;
+    right: 5%;
+    background: var(--white);
+    flex-direction: column;
+    width: 220px;
+    padding: 20px;
+    gap: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  .menu-links.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .hamb {
+    display: block;
+  }
 }
 </style>
-
 </head>
-
 <body>
 
 <nav class="menu" id="menu">
-  <div><strong>Sara</strong></div>
+  <div class="brand">Sara de Souza</div>
 
   <div class="menu-links" id="links">
-    <a href="#sobre">Sobre</a>
-    <a href="#ajuda">Atendimento</a>
-    <a href="#abordagem">Abordagem</a>
-    <a href="#faq">Dúvidas</a>
-    <a href="#agendamento" class="btn-menu">Agendar</a>
+    <a href="#sobre" onclick="toggleMenu()">Sobre</a>
+    <a href="#ajuda" onclick="toggleMenu()">Atendimento</a>
+    <a href="#abordagem" onclick="toggleMenu()">Abordagem</a>
+    <a href="#faq" onclick="toggleMenu()">Dúvidas</a>
+    <a href="https://wa.me/554187171003" class="btn-menu">Agendar</a>
   </div>
 
   <div class="hamb" onclick="toggleMenu()">☰</div>
 </nav>
 
 <header>
+  <div class="foto-wrapper">
+    <img
+      src="https://media.licdn.com/dms/image/v2/D4D03AQEtVH4wd9xjSQ/profile-displayphoto-crop_800_800/B4DZ5lusWAKYAI-/0/1779823200383?e=1782950400&v=beta&t=kCGcw-KH-MrNIGCXYz6sCBIQdfb_F22BVtU8n9SX4xw"
+      class="foto"
+      alt="Retrato da Psicóloga Sara de Souza"
+      onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=400&auto=format&fit=crop';"
+    >
+  </div>
 
-<img
-src="https://media.licdn.com/dms/image/v2/D4D03AQEtVH4wd9xjSQ/profile-displayphoto-crop_800_800/B4DZ5lusWAKYAI-/0/1779823200383?e=1782950400&v=beta&t=kCGcw-KH-MrNIGCXYz6sCBIQdfb_F22BVtU8n9SX4xw"
-class="foto"
-onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=400&auto=format&fit=crop';"
+  <h1>Sara de Souza</h1>
 
->
+  <p class="sub">
+    Psicóloga Clínica • CRP 06/220759<br><br>
+    Terapia Cognitivo-Comportamental focada no desenvolvimento e bem-estar de adultos.
+  </p>
 
-<h1>Sara de Souza</h1>
-
-<p class="sub">
-Psicóloga Clínica • CRP 06/220759<br>
-Terapia Cognitivo-Comportamental (TCC)<br>
-Atendimento psicológico para adultos
-</p>
-
-<a class="btn" href="https://wa.me/554187171003">
-Agendar pelo WhatsApp
-</a>
-
+  <a class="btn" href="https://wa.me/554187171003" target="_blank">
+    Agendar consulta pelo WhatsApp
+  </a>
 </header>
 
 <section id="sobre">
-<h2>Sobre o atendimento</h2>
-
-<p>
-A psicoterapia é um espaço de acolhimento, escuta e construção. Meu trabalho é oferecer um ambiente seguro, ético e sem julgamentos.
-</p>
-
-<p>
-Atuo com Terapia Cognitivo-Comportamental (TCC), focada no presente e em estratégias práticas.
-</p>
-
+  <h2>Sobre o espaço terapêutico</h2>
+  <p class="texto-centralizado">
+    A psicoterapia é um espaço de acolhimento, escuta atenta e construção conjunta. Meu trabalho é oferecer a você um ambiente totalmente seguro, ético e livre de julgamentos.
+  </p>
+  <p class="texto-centralizado">
+    Através da Terapia Cognitivo-Comportamental (TCC), trabalhamos focados no presente, desenvolvendo estratégias práticas para lidar com as adversidades do dia a dia.
+  </p>
 </section>
 
-<section id="ajuda">
-<h2>Como posso te ajudar</h2>
+<section id="ajuda" style="background-color: var(--white);">
+  <h2>Como posso te ajudar</h2>
+  
+  <div class="cards">
+    <div class="card">
+      <h3>Ansiedade e Estresse</h3>
+      <p>Técnicas baseadas em evidências para redução de sintomas, controle emocional e manejo de crises no cotidiano.</p>
+    </div>
 
-<div class="cards">
-<div class="card">
-<h3>Ansiedade e estresse</h3>
-<p>Redução de sintomas e controle emocional.</p>
-</div>
+    <div class="card">
+      <h3>Autoconhecimento</h3>
+      <p>Desenvolvimento pessoal contínuo, fortalecimento da autoestima e clareza para tomadas de decisão.</p>
+    </div>
 
-<div class="card">
-<h3>Autoconhecimento</h3>
-<p>Desenvolvimento pessoal e autoestima.</p>
-</div>
-
-<div class="card">
-<h3>Relacionamentos</h3>
-<p>Melhoria de comunicação e vínculos.</p>
-</div>
-</div>
-
+    <div class="card">
+      <h3>Relacionamentos</h3>
+      <p>Aprimoramento da comunicação assertiva, estabelecimento de limites e construção de vínculos mais saudáveis.</p>
+    </div>
+  </div>
 </section>
 
 <section id="abordagem">
-<h2>Minha abordagem</h2>
-<p>
-A TCC trabalha a relação entre pensamentos, emoções e comportamentos, com foco em soluções práticas.
-</p>
+  <h2>A Abordagem (TCC)</h2>
+  <p class="texto-centralizado">
+    A Terapia Cognitivo-Comportamental é uma abordagem diretiva e estruturada. Nós trabalhamos entendendo a relação direta entre seus pensamentos, suas emoções e seus comportamentos, focando em soluções e no alcance das suas metas terapêuticas.
+  </p>
 </section>
 
-<section id="faq">
-<h2>Perguntas frequentes</h2>
+<section id="faq" style="background-color: var(--white);">
+  <h2>Perguntas Frequentes</h2>
 
-<p><strong>Duração?</strong><br>50 minutos.</p>
-<p><strong>É sigiloso?</strong><br>Sim.</p>
-<p><strong>Como agendar?</strong><br>WhatsApp.</p>
-
-</section>
-
-<section id="agendamento">
-<h2>Agendamento online</h2>
-<p>Em breve</p>
+  <div class="faq-grid">
+    <div class="faq-item">
+      <strong>Duração das sessões?</strong>
+      <span>As sessões possuem duração padrão de 50 minutos e ocorrem geralmente uma vez por semana.</span>
+    </div>
+    <div class="faq-item">
+      <strong>O atendimento é sigiloso?</strong>
+      <span>Sim. Todo o conteúdo abordado em sessão é estritamente confidencial, amparado pelo código de ética da profissão.</span>
+    </div>
+    <div class="faq-item">
+      <strong>Como funciona o pagamento?</strong>
+      <span>Os valores e formas de pagamento são alinhados diretamente via WhatsApp antes da primeira sessão.</span>
+    </div>
+  </div>
 </section>
 
 <footer>
+  <p><strong>Sara de Souza</strong><br>
+  Psicóloga Clínica • CRP 06/220759</p>
 
-<p><strong>Sara de Souza</strong><br>
-Psicóloga Clínica • CRP 06/220759</p>
+  <p style="margin-top: 15px;">Contato: (41) 8717-1003</p>
 
-<p>WhatsApp: (41) 8717-1003</p>
+  <div class="social">
+    <a href="https://www.instagram.com/psicosarassouza" target="_blank">Instagram</a>
+    <a href="https://www.linkedin.com/in/sarasouzza-sl" target="_blank">LinkedIn</a>
+  </div>
 
-<div class="social">
-<a href="https://www.instagram.com/psicosarassouza" target="_blank">Instagram</a>
-<a href="https://www.linkedin.com/in/sarasouzza-sl" target="_blank">LinkedIn</a>
-</div>
-
-<p style="margin-top:20px;font-size:12px;">
-Este site não oferece atendimento emergencial. Em caso de crise, ligue 188.
-</p>
-
+  <p class="aviso">
+    Este site não oferece atendimento emergencial. Em caso de crise ou risco à vida, ligue imediatamente para o CVV (188) ou procure o pronto-socorro mais próximo.
+  </p>
 </footer>
 
 <script>
-function toggleMenu(){
-document.getElementById("links").classList.toggle("active");
+// Lógica para o menu mobile
+function toggleMenu() {
+  const links = document.getElementById("links");
+  links.classList.toggle("active");
 }
 
-window.addEventListener("scroll", function(){
-let menu = document.getElementById("menu");
-menu.classList.toggle("scrolled", window.scrollY > 50);
+// Lógica para o fundo do menu ao rolar a página
+window.addEventListener("scroll", function() {
+  const menu = document.getElementById("menu");
+  if (window.scrollY > 50) {
+    menu.classList.add("scrolled");
+  } else {
+    menu.classList.remove("scrolled");
+  }
 });
 </script>
 
