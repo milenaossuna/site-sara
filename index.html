@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -15,8 +16,79 @@ background:#f7f8f7;
 color:#2e2e2e;
 }
 
+/* MENU */
+.menu{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+z-index:1000;
+transition:0.3s;
+}
+
+.menu.scrolled{
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.menu-links{
+display:flex;
+gap:20px;
+}
+
+.menu a{
+text-decoration:none;
+color:#2e2e2e;
+font-size:14px;
+}
+
+.menu a:hover{
+color:#6b8f7a;
+}
+
+.btn-menu{
+background:#6b8f7a;
+color:white;
+padding:6px 14px;
+border-radius:6px;
+}
+
+/* HAMBURGUER */
+.hamb{
+display:none;
+font-size:22px;
+cursor:pointer;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.menu-links{
+position:absolute;
+top:60px;
+right:0;
+background:white;
+flex-direction:column;
+width:200px;
+padding:20px;
+display:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.menu-links.active{
+display:flex;
+}
+
+.hamb{
+display:block;
+}
+}
+
+/* HEADER */
 header{
-padding:80px 20px;
+padding:110px 20px 80px;
 text-align:center;
 background:#eef2ef;
 }
@@ -52,7 +124,6 @@ background:#6b8f7a;
 color:white;
 border-radius:6px;
 text-decoration:none;
-font-size:15px;
 }
 
 section{
@@ -90,14 +161,38 @@ margin:0 10px;
 text-decoration:none;
 color:#2e2e2e;
 }
+
+html{
+scroll-behavior:smooth;
+}
 </style>
+
 </head>
 
 <body>
 
+<nav class="menu" id="menu">
+  <div><strong>Sara</strong></div>
+
+  <div class="menu-links" id="links">
+    <a href="#sobre">Sobre</a>
+    <a href="#ajuda">Atendimento</a>
+    <a href="#abordagem">Abordagem</a>
+    <a href="#faq">Dúvidas</a>
+    <a href="#agendamento" class="btn-menu">Agendar</a>
+  </div>
+
+  <div class="hamb" onclick="toggleMenu()">☰</div>
+</nav>
+
 <header>
 
-<img src="https://media.licdn.com/dms/image/v2/D4D03AQEtVH4wd9xjSQ/profile-displayphoto-crop_800_800/B4DZ5lusWAKYAI-/0/1779823200383?e=1782950400&v=beta&t=kCGcw-KH-MrNIGCXYz6sCBIQdfb_F22BVtU8n9SX4xw" class="foto">
+<img
+src="https://media.licdn.com/dms/image/v2/D4D03AQEtVH4wd9xjSQ/profile-displayphoto-crop_800_800/B4DZ5lusWAKYAI-/0/1779823200383?e=1782950400&v=beta&t=kCGcw-KH-MrNIGCXYz6sCBIQdfb_F22BVtU8n9SX4xw"
+class="foto"
+onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=400&auto=format&fit=crop';"
+
+>
 
 <h1>Sara de Souza</h1>
 
@@ -113,80 +208,60 @@ Agendar pelo WhatsApp
 
 </header>
 
-<section>
+<section id="sobre">
 <h2>Sobre o atendimento</h2>
 
 <p>
-A psicoterapia é um espaço de acolhimento, escuta e construção. Meu trabalho é oferecer um ambiente seguro, ético e sem julgamentos, onde você possa compreender melhor seus pensamentos, emoções e comportamentos.
+A psicoterapia é um espaço de acolhimento, escuta e construção. Meu trabalho é oferecer um ambiente seguro, ético e sem julgamentos.
 </p>
 
 <p>
-Atuo com a Terapia Cognitivo-Comportamental (TCC), uma abordagem baseada em evidências científicas, focada no presente e no desenvolvimento de estratégias práticas para lidar com dificuldades emocionais e comportamentais.
-</p>
-
-<p>
-O processo terapêutico é colaborativo e respeita o seu tempo, suas vivências e sua individualidade.
+Atuo com Terapia Cognitivo-Comportamental (TCC), focada no presente e em estratégias práticas.
 </p>
 
 </section>
 
-<section>
+<section id="ajuda">
 <h2>Como posso te ajudar</h2>
 
 <div class="cards">
-
 <div class="card">
 <h3>Ansiedade e estresse</h3>
-<p>Identificação de padrões de pensamento e desenvolvimento de estratégias para reduzir sintomas e promover equilíbrio emocional.</p>
+<p>Redução de sintomas e controle emocional.</p>
 </div>
 
 <div class="card">
 <h3>Autoconhecimento</h3>
-<p>Compreensão mais profunda de si mesmo, auxiliando em decisões, autoestima e construção de sentido.</p>
+<p>Desenvolvimento pessoal e autoestima.</p>
 </div>
 
 <div class="card">
 <h3>Relacionamentos</h3>
-<p>Melhoria na comunicação, estabelecimento de limites e desenvolvimento de vínculos mais saudáveis.</p>
+<p>Melhoria de comunicação e vínculos.</p>
 </div>
-
 </div>
 
 </section>
 
-<section>
+<section id="abordagem">
 <h2>Minha abordagem</h2>
-
 <p>
-A Terapia Cognitivo-Comportamental (TCC) é uma abordagem estruturada e orientada para objetivos, com foco na relação entre pensamentos, emoções e comportamentos. Durante o processo terapêutico, trabalhamos juntos na identificação de padrões que geram sofrimento e no desenvolvimento de habilidades práticas para lidar com os desafios do dia a dia.
+A TCC trabalha a relação entre pensamentos, emoções e comportamentos, com foco em soluções práticas.
 </p>
-
 </section>
 
-<section>
+<section id="faq">
 <h2>Perguntas frequentes</h2>
 
-<p><strong>Como funciona o atendimento?</strong><br>
-As sessões têm duração média de 50 minutos e são realizadas de forma online, com frequência semanal.
-</p>
-
-<p><strong>O atendimento é sigiloso?</strong><br>
-Sim. Todo o processo segue rigorosamente o Código de Ética Profissional do Psicólogo.
-</p>
-
-<p><strong>Como agendar?</strong><br>
-Você pode agendar diretamente pelo WhatsApp ou pelo agendamento online disponível abaixo.
-</p>
+<p><strong>Duração?</strong><br>50 minutos.</p>
+<p><strong>É sigiloso?</strong><br>Sim.</p>
+<p><strong>Como agendar?</strong><br>WhatsApp.</p>
 
 </section>
 
-<section>
+<section id="agendamento">
 <h2>Agendamento online</h2>
-
-<div style="min-height:600px;display:flex;align-items:center;justify-content:center;">
-<p>Agendamento online em breve</p>
-</div>
-
+<p>Em breve</p>
 </section>
 
 <footer>
@@ -202,10 +277,21 @@ Psicóloga Clínica • CRP 06/220759</p>
 </div>
 
 <p style="margin-top:20px;font-size:12px;">
-Este site não oferece atendimento emergencial. Em caso de crise, ligue 188 (CVV).
+Este site não oferece atendimento emergencial. Em caso de crise, ligue 188.
 </p>
 
 </footer>
+
+<script>
+function toggleMenu(){
+document.getElementById("links").classList.toggle("active");
+}
+
+window.addEventListener("scroll", function(){
+let menu = document.getElementById("menu");
+menu.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
 
 </body>
 </html>
