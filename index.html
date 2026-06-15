@@ -6,10 +6,10 @@
 
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23111111'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Epilogue, sans-serif' font-size='60' font-weight='600' fill='%23FFFFFF'>S</text></svg>">
 
-<title>Sara de Souza | Psicóloga Clínica</title>
-<meta name="description" content="Encontre um espaço seguro para cuidar da sua saúde mental, gerenciar a ansiedade e construir uma vida mais leve.">
-<meta property="og:title" content="Sara de Souza | Psicóloga Clínica">
-<meta property="og:description" content="Atendimento psicológico acolhedor e focado em soluções práticas. Agende sua sessão online.">
+<title>Sara de Souza | Psicóloga Especialista em Luto</title>
+<meta name="description" content="Um espaço seguro para acolher o seu luto, ressignificar a dor e reconstruir o seu caminhar no seu próprio tempo. Atendimento online.">
+<meta property="og:title" content="Sara de Souza | Acolhimento ao Luto">
+<meta property="og:description" content="Psicoterapia online focada no acolhimento de perdas e luto. Agende sua sessão.">
 <meta property="og:url" content="https://psicologasarasouza.vercel.app">
 <meta property="og:type" content="website">
 
@@ -146,7 +146,7 @@ header {
 
 h1 {
   font-family: 'Epilogue', sans-serif;
-  font-size: 7vw; /* Escala dinamicamente com a tela */
+  font-size: 7vw;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: -0.03em;
@@ -176,6 +176,7 @@ h1 {
   font-weight: 400;
 }
 
+/* BOTAO COM MICRO-INTERAÇÃO DE SETA */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -194,9 +195,47 @@ h1 {
   transition: all 0.3s ease;
 }
 
+.btn svg {
+  transition: transform 0.3s ease;
+}
+
 .btn:hover {
   background: transparent;
   color: var(--text-main);
+}
+
+.btn:hover svg {
+  transform: translateX(6px);
+}
+
+/* LETREIRO EM MOVIMENTO */
+.marquee-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-color);
+  padding: 18px 0;
+  display: flex;
+}
+
+.marquee-content {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+.marquee-text {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-main);
+  padding: 0 40px;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* ESTRUTURA GLOBAL DAS SEÇÕES */
@@ -209,12 +248,13 @@ section {
 .sobre-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0; /* Grelha fechada */
+  gap: 0;
   border: 1px solid var(--border-color);
 }
 
 .sobre-imagem {
   border-right: 1px solid var(--border-color);
+  overflow: hidden;
 }
 
 .sobre-imagem img {
@@ -223,6 +263,14 @@ section {
   min-height: 600px;
   object-fit: cover;
   display: block;
+  filter: grayscale(100%);
+  transform: scale(1);
+  transition: filter 0.8s ease, transform 0.8s ease;
+}
+
+.sobre-imagem img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.03);
 }
 
 .sobre-texto {
@@ -334,7 +382,7 @@ section {
   color: var(--text-light);
 }
 
-/* FAQ E BANNER ONLINE JUNTOS */
+/* FAQ E BANNER ONLINE */
 .faq-online-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -414,7 +462,7 @@ section {
   font-size: 15px;
 }
 
-/* RODAPÉ BRUTALISTA */
+/* RODAPÉ */
 footer {
   padding: 100px 40px 40px;
   text-align: center;
@@ -461,7 +509,7 @@ footer {
   margin: 0 auto;
 }
 
-/* WHATSAPP FLUTUANTE RETO */
+/* WHATSAPP FLUTUANTE */
 .whatsapp-float {
   position: fixed;
   bottom: 30px;
@@ -478,7 +526,7 @@ footer {
 }
 
 .whatsapp-float:hover {
-  background: var(--whatsapp);
+  background: #25D366;
   color: white;
 }
 
@@ -488,13 +536,15 @@ footer {
   fill: currentColor;
 }
 
-/* RESPONSIVIDADE PARA TELEMÓVEL (MOBILE) */
+/* MOBILE */
 @media(max-width: 900px) {
   .menu { padding: 20px; }
   header { padding: 160px 20px 80px; }
   h1 { font-size: 12vw; }
   section { padding: 60px 20px; }
   
+  .marquee-text { font-size: 11px; padding: 0 20px; }
+
   .menu-links {
     position: absolute;
     top: 70px;
@@ -519,7 +569,7 @@ footer {
   }
 
   .sobre-imagem { border-right: none; border-bottom: 1px solid var(--border-color); }
-  .sobre-imagem img { min-height: 400px; }
+  .sobre-imagem img { min-height: 400px; filter: grayscale(0%); }
   .sobre-texto { padding: 40px 20px; }
   
   .card { border-right: none; border-bottom: 1px solid var(--border-color); }
@@ -540,7 +590,7 @@ footer {
   <div class="brand">Sara de Souza</div>
   <div class="menu-links" id="links">
     <a href="#sobre" onclick="toggleMenu()">Sobre</a>
-    <a href="#atendimento" onclick="toggleMenu()">Áreas</a>
+    <a href="#atendimento" onclick="toggleMenu()">O Acolhimento</a>
     <a href="#funcionamento" onclick="toggleMenu()">Jornada</a>
     <a href="https://calendar.app.google/CGDEQv5CtrxD7THm8" class="btn-menu" target="_blank">Agendar</a>
   </div>
@@ -548,13 +598,13 @@ footer {
 </nav>
 
 <header class="reveal">
-  <span class="label">( Psicoterapia Clínica )</span>
+  <span class="label">( Psicoterapia e Luto )</span>
   <h1>Sara de Souza</h1>
   
   <div class="crp-badge">[ CRP 06/220759 ]</div>
   
   <p class="sub">
-    Você não precisa lidar com o peso da rotina sozinho. Encontre um espaço seguro para cuidar da sua saúde mental, gerenciar a ansiedade e construir uma vida mais leve.
+    Você não precisa atravessar a dor da perda sozinho. Encontre um espaço seguro para acolher o seu luto, ressignificar a sua história e reconstruir o seu caminhar no seu próprio tempo.
   </p>
   
   <a class="btn" href="https://calendar.app.google/CGDEQv5CtrxD7THm8" target="_blank">
@@ -563,39 +613,47 @@ footer {
   </a>
 </header>
 
+<div class="marquee-wrapper reveal">
+  <div class="marquee-content">
+    <span class="marquee-text">( Acolhimento ao Luto ) — ( Terapia de Aceitação ) — ( Espaço Seguro ) — ( Atendimento Online ) —</span>
+    <span class="marquee-text">( Acolhimento ao Luto ) — ( Terapia de Aceitação ) — ( Espaço Seguro ) — ( Atendimento Online ) —</span>
+    <span class="marquee-text">( Acolhimento ao Luto ) — ( Terapia de Aceitação ) — ( Espaço Seguro ) — ( Atendimento Online ) —</span>
+  </div>
+</div>
+
 <section id="sobre" class="reveal">
   <span class="label">( A Profissional )</span>
   <div class="sobre-container">
     <div class="sobre-imagem">
-      <img src="https://media.licdn.com/dms/image/v2/D4D03AQEtVH4wd9xjSQ/profile-displayphoto-crop_800_800/B4DZ5lusWAKYAI-/0/1779823200383?e=1782950400&v=beta&t=kCGcw-KH-MrNIGCXYz6sCBIQdfb_F22BVtU8n9SX4xw" alt="Psicóloga Sara de Souza">
+      <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800&auto=format&fit=crop" alt="Psicóloga Sara de Souza">
     </div>
     
     <div class="sobre-texto">
-      <h2>Quem vai te acompanhar.</h2>
-      <p>Acredito que a psicoterapia não é sobre tentar apagar a sua história, mas sim sobre construir repertório para lidar com os desafios da rotina de uma forma muito mais consciente e leve. Meu papel é te guiar nesse processo com ética, ciência e, acima de tudo, escuta ativa.</p>
+      <h2>Quem vai te guiar.</h2>
+      <p>Acredito que o luto não é um problema a ser "resolvido" ou uma fase a ser esquecida, mas sim um processo profundo de honrar quem (ou o que) partiu enquanto encontramos formas de continuar a viver. Meu papel é te guiar nessa travessia com ética, empatia e, acima de tudo, escuta ativa.</p>
       
-      <p>Sou pós-graduanda em Terapias Cognitivo-Comportamentais Contextuais pela prestigiada PUCPR/Artmed. Essa é uma abordagem baseada em evidências que foca não apenas na redução dos sintomas, mas em te ajudar a tomar decisões de acordo com os valores que importam para você.</p>
+      <p>Sou pós-graduanda em Terapias Cognitivo-Comportamentais Contextuais (PUCPR/Artmed). Essa é uma abordagem baseada em evidências que foca não em tentar apagar a sua dor, mas em te ajudar a fazer espaço para ela, integrando a perda e permitindo que você aja de acordo com os valores que realmente importam.</p>
       
-      <p>Além dos atendimentos clínicos online, atuo diretamente no Sistema de Saúde Mental Público (CAPS), o que me traz uma compreensão clínica profunda para acolher as mais diversas complexidades do sofrimento emocional, totalmente livre de julgamentos.</p>
+      <p>Além dos atendimentos clínicos online, atuo no Sistema de Saúde Mental Público (CAPS), o que me traz uma compreensão clínica e humana profunda para acolher o sofrimento emocional em suas formas mais complexas, garantindo um espaço totalmente livre de julgamentos.</p>
     </div>
   </div>
 </section>
 
 <section id="atendimento" class="reveal" style="background-color: var(--white);">
   <div class="cards-wrapper">
-    <span class="label">( Áreas de Atuação )</span>
+    <span class="label">( Como Posso Ajudar )</span>
     <div class="cards">
       <div class="card">
-        <h3>Ansiedade e Estresse</h3>
-        <p>Técnicas baseadas em evidências para reduzir a exaustão mental, controlar crises e devolver a tranquilidade ao seu dia a dia.</p>
+        <h3>O Luto Recente</h3>
+        <p>Os primeiros momentos após uma perda podem ser avassaladores. Ofereço um espaço de escuta para você vivenciar o choque e a dor sem julgamentos ou pressa.</p>
       </div>
       <div class="card">
-        <h3>Autoconhecimento</h3>
-        <p>Fortaleça sua autoestima para impor limites, dizer "não" e tomar decisões com segurança e clareza sobre o que você realmente quer.</p>
+        <h3>Reconstrução</h3>
+        <p>Quando a vida parece perder o sentido. Vamos trabalhar juntos para integrar a perda, ressignificar a dor e encontrar formas possíveis de continuar caminhando.</p>
       </div>
       <div class="card">
-        <h3>Relacionamentos</h3>
-        <p>Aprenda a se comunicar de forma assertiva e a construir laços onde você se sinta valorizado, sem se anular no processo.</p>
+        <h3>Lutos Silenciosos</h3>
+        <p>Acolhimento para dores que muitas vezes não são validadas socialmente, como perdas gestacionais, separações difíceis e transições de vida.</p>
       </div>
     </div>
   </div>
@@ -607,18 +665,18 @@ footer {
     <div class="passos-grid">
       <div class="passo-item">
         <div class="passo-numero">01</div>
-        <h3>Escolha seu horário</h3>
-        <p>Acesse a agenda online e selecione o dia e horário que melhor se encaixam na sua rotina, de forma rápida e transparente.</p>
+        <h3>O Primeiro Passo</h3>
+        <p>Acesse a agenda online e selecione o dia e horário que melhor se encaixam para você iniciar o seu processo no seu ritmo.</p>
       </div>
       <div class="passo-item">
         <div class="passo-numero">02</div>
-        <h3>O Link Seguro</h3>
-        <p>Você receberá um e-mail de confirmação automático contendo o link exclusivo do Google Meet para o nosso encontro.</p>
+        <h3>Conexão Segura</h3>
+        <p>Você receberá um e-mail automático contendo o link exclusivo e seguro do Google Meet para o nosso encontro.</p>
       </div>
       <div class="passo-item">
         <div class="passo-numero">03</div>
         <h3>A Sessão</h3>
-        <p>No horário marcado, conecte-se através do seu celular ou computador, garantindo que esteja em um ambiente calmo e privativo.</p>
+        <p>No horário marcado, conecte-se através do seu celular ou computador, buscando estar em um ambiente calmo e com privacidade.</p>
       </div>
     </div>
   </div>
@@ -630,21 +688,21 @@ footer {
     <div class="faq-list">
       <div class="faq-item">
         <strong>Qual é a duração das sessões?</strong>
-        <span>As sessões possuem duração padrão de 50 minutos e ocorrem com frequência semanal para garantir a evolução do processo.</span>
+        <span>As sessões possuem duração de 50 minutos e ocorrem com frequência semanal para garantir um acompanhamento próximo e eficaz.</span>
       </div>
       <div class="faq-item">
         <strong>O atendimento é sigiloso?</strong>
-        <span>Sim. Todo o conteúdo é confidencial, amparado pelo código de ética. As chamadas possuem criptografia de ponta a ponta.</span>
+        <span>Absolutamente. Todo o conteúdo abordado é confidencial, amparado pelo código de ética do CRP, e as chamadas possuem criptografia.</span>
       </div>
       <div class="faq-item">
         <strong>Como funciona o pagamento?</strong>
-        <span>Os pagamentos são realizados via Pix ou transferência. Os detalhes vão no e-mail de confirmação da sua consulta.</span>
+        <span>Os pagamentos podem ser realizados via Pix ou transferência bancária. Detalhes completos serão enviados no e-mail de confirmação.</span>
       </div>
     </div>
     
     <div class="banner-online">
-      <h3>Terapia 100% Online</h3>
-      <p>Sessões realizadas por videochamada com a mesma eficácia do atendimento presencial. Tenha seu momento de cuidado no conforto e na privacidade da sua casa.</p>
+      <h3>Seu Espaço Seguro</h3>
+      <p>Sessões online realizadas por videochamada com total privacidade e eficácia. Tenha o seu momento de acolhimento no conforto do seu lar.</p>
       <a href="https://calendar.app.google/CGDEQv5CtrxD7THm8" class="btn-light" target="_blank">Ver Horários Disponíveis</a>
     </div>
   </div>
@@ -652,7 +710,7 @@ footer {
 
 <footer class="reveal">
   <div class="footer-brand">Sara de Souza</div>
-  <span class="label" style="margin-bottom: 0;">( Psicologia Clínica )</span>
+  <span class="label" style="margin-bottom: 0;">( Psicóloga Especialista em Luto )</span>
 
   <div class="social">
     <a href="https://www.instagram.com/psicosarassouza" target="_blank">Instagram</a>
@@ -660,7 +718,7 @@ footer {
     <a href="https://wa.me/554187171003" target="_blank">WhatsApp</a>
   </div>
 
-  <p class="aviso">Este site não oferece atendimento emergencial. Em caso de crise ou risco à vida, ligue imediatamente para o CVV (188) ou procure o pronto-socorro mais próximo.</p>
+  <p class="aviso">Este site não oferece atendimento emergencial. Em caso de crise aguda ou risco à vida, ligue imediatamente para o CVV (188) ou procure o pronto-socorro mais próximo.</p>
 </footer>
 
 <a href="https://wa.me/554187171003" class="whatsapp-float" target="_blank" aria-label="Fale conosco pelo WhatsApp">
