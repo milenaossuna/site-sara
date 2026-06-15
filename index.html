@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23111111'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Epilogue, sans-serif' font-size='60' font-weight='600' fill='%23FFFFFF'>S</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%2314213d'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Epilogue, sans-serif' font-size='60' font-weight='600' fill='%23FFFFFF'>S</text></svg>">
 
 <title>Sara de Souza | Psicóloga Especialista em Luto</title>
 <meta name="description" content="Um espaço seguro para acolher o seu luto, ressignificar a dor e reconstruir o seu caminhar no seu próprio tempo. Atendimento online.">
@@ -18,12 +18,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-/* PALETA MINIMALISTA / NEO-BRUTALISTA */
+/* NOVA PALETA AZUL SERENO / NEO-BRUTALISTA */
 :root {
-  --bg-color: #F4F4F2;
-  --text-main: #111111;
-  --text-light: #555555;
-  --border-color: #D6D6D6;
+  --bg-color: #F0F4F8;     /* Fundo 'gelo' muito suave */
+  --text-main: #14213d;    /* Azul marinho noturno */
+  --text-light: #4A5A75;   /* Azul acinzentado para textos de apoio */
+  --border-color: #CDD7E0; /* Linhas num tom frio elegante */
   --white: #FFFFFF;
 }
 
@@ -115,7 +115,7 @@ html {
 }
 
 .menu a:hover {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .btn-menu {
@@ -208,36 +208,6 @@ h1 {
   transform: translateX(6px);
 }
 
-/* LETREIRO EM MOVIMENTO */
-.marquee-wrapper {
-  overflow: hidden;
-  white-space: nowrap;
-  border-bottom: 1px solid var(--border-color);
-  background: var(--bg-color);
-  padding: 18px 0;
-  display: flex;
-}
-
-.marquee-content {
-  display: flex;
-  animation: scroll 20s linear infinite;
-}
-
-.marquee-text {
-  font-family: 'Epilogue', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--text-main);
-  padding: 0 40px;
-}
-
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
 /* ESTRUTURA GLOBAL DAS SEÇÕES */
 section {
   padding: 100px 40px;
@@ -269,7 +239,7 @@ section {
 }
 
 .sobre-imagem img:hover {
-  filter: grayscale(0%);
+  filter: grayscale(20%);
   transform: scale(1.03);
 }
 
@@ -526,7 +496,7 @@ footer {
 }
 
 .whatsapp-float:hover {
-  background: #25D366;
+  background: #25D366; 
   color: white;
 }
 
@@ -543,8 +513,6 @@ footer {
   h1 { font-size: 12vw; }
   section { padding: 60px 20px; }
   
-  .marquee-text { font-size: 11px; padding: 0 20px; }
-
   .menu-links {
     position: absolute;
     top: 70px;
@@ -569,7 +537,7 @@ footer {
   }
 
   .sobre-imagem { border-right: none; border-bottom: 1px solid var(--border-color); }
-  .sobre-imagem img { min-height: 400px; filter: grayscale(0%); }
+  .sobre-imagem img { min-height: 400px; filter: grayscale(20%); }
   .sobre-texto { padding: 40px 20px; }
   
   .card { border-right: none; border-bottom: 1px solid var(--border-color); }
@@ -612,14 +580,6 @@ footer {
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
   </a>
 </header>
-
-<div class="marquee-wrapper reveal">
-  <div class="marquee-content">
-    <span class="marquee-text">( Acolhimento ao Luto ) — ( Terapia de Aceitação ) — ( Espaço Seguro ) — ( Atendimento Online ) —</span>
-    <span class="marquee-text">( Acolhimento ao Luto ) — ( Terapia de Aceitação ) — ( Espaço Seguro ) — ( Atendimento Online ) —</span>
-    <span class="marquee-text">( Acolhimento ao Luto ) — ( Terapia de Aceitação ) — ( Espaço Seguro ) — ( Atendimento Online ) —</span>
-  </div>
-</div>
 
 <section id="sobre" class="reveal">
   <span class="label">( A Profissional )</span>
